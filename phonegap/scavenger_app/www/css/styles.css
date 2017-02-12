@@ -1,0 +1,126 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.tabbar {
+    z-index: 5001;
+    overflow: hidden;
+    bottom: 0;
+    top: auto;
+}
+
+.tabs {
+    border: none;
+}
+
+.theme-purple .navbar,
+.navbar.theme-purple,
+.theme-purple .toolbar,
+.toolbar.theme-purple,
+.theme-purple .subnavbar,
+.subnavbar.theme-purple,
+.theme-purple .searchbar,
+.searchbar.theme-purple {
+    background-color: #946c49;
+}
+
+.toolbar.tabbar,
+.theme-purple .button.button-fill{
+    background-color: #313131;
+    /* Grey */
+}
+.color-blue i.icon, 
+i.icon.color-blue {
+    color: #313131;
+}
+
+.theme-purple .button.button-fill {
+    margin-bottom: 4px;
+    opacity: 0.9;
+}
+
+.page {
+    background: RGB(221, 228, 229);
+}
+
+.card {
+    margin: 8px;
+    box-shadow: none;
+}
+
+.card-footer {
+    color: #cbc9c9;
+}
+
+.theme-purple a {
+    color: #333333;
+}
+
+.strike {
+    position: relative;
+}
+
+.strike::after {
+    content: '';
+    border-bottom: 2px solid black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+}
+
+.card-header {
+    border-radius: 2px 2px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px
+}
+
+.navbar .center,
+.subnavbar .center {
+    line-height: 2;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.index-content {
+    background: url(/img/botbg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.text-center {
+    color: #2c1919;
+    text-align: center;
+    text-shadow: 0 0 1px #ffffff;
+}
+
+/* Logo style */
+
+.center.sliding img {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 10%;
+}

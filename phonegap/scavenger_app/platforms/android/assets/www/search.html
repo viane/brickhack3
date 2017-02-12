@@ -1,0 +1,47 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a>
+    </div>
+    <div class="center sliding">Search Games</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+      <a href="#" class="link icon-only"> <i class="icon f7-icons">compass</i></a>
+    </div>
+  </div>
+</div>
+<!-- Page, data-page contains page name-->
+<div data-page="search" class="page">
+  <!-- Search Bar -->
+  <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search">
+      <a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+
+  <!-- Search Bar overlay -->
+  <div class="searchbar-overlay"></div>
+
+  <!-- Scrollable page content-->
+  <div class="page-content">
+
+    <!-- This block will be displayed if nothing found -->
+    <div class="content-block searchbar-not-found">
+      <div class="card">
+        <div class="card-header"><a href="game.html">Sorry...</a></div>
+        <div class="card-content">
+          <div class="card-content-inner">No games were found in your location.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+    <div class="list-block-search searchbar-found">
+      <!-- Display card for each scavenger hunt found -->
+
+    </div>
+  </div>
+</div>

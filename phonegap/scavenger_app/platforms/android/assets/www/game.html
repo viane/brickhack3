@@ -1,0 +1,79 @@
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="index.html" class="link"> <i class="icon f7-icons">home</i></a>
+        </div>
+        <div class="right sliding">{{name}}</div>
+    </div>
+</div>
+
+<!-- Page, data-page contains page name-->
+<div data-page="game" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+        <div class="tabs">
+            <div class="tab active" id="tasks">
+
+                <!-- Each task is a card -->
+                <div class="content-block">
+                    <div class="content-block-title" style="font-weight: 800;">Tasks</div>
+                    <div class="task-cards">
+                        {{#each task}}
+                        <div class="card task-card-{{id}}" data-id="{{id}}">
+                            <div class="card-content">
+                                <div class="card-content-inner">
+                                    <div class="row">
+                                        <span style="display: none;" class="tags"> {{#each tag}}
+                                            {{this}} 
+                                            
+                                            {{/each}}
+                                        </span>
+                                        <div class="col-70">
+                                            {{#if status}}
+                                                <span class="strike">{{requirement}}</span>
+                                            {{else}}
+                                                <span id="requirement">{{requirement}}</span>
+                                            {{/if}}
+                                        </div>
+                                        <div class="col-30" style="text-align: right;">
+                                            {{#if status}}
+                                                <i id="check-icon" class="icon f7-icons color-green">check_round_fill</i>
+                                                <i id="camera-icon" style="display: none;" data-id="{{id}}" class=" camera-icon icon f7-icons color-blue">camera_fill</i>
+                                            {{else}}
+                                                <i id="check-icon" style="display: none;" class="icon f7-icons color-green">check_round_fill</i>
+                                                <i id="camera-icon" data-id="{{id}}" class="camera-icon icon f7-icons color-blue">camera_fill</i>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="tab" id="leaderboard">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom navigation tab bar -->
+    <div class="toolbar tabbar">
+        <div class="toolbar-inner">
+            <a href="#leaderboard" class="tab-link">
+                <i class="icon f7-icons">graph_square</i>
+            </a>
+            <a href="#tasks" class="tab-link active">
+                <i class="icon f7-icons">flag_fill</i>
+            </a>
+        </div>
+    </div>
+    
+    <form method="post" id="form1" style="display: none;" enctype="multipart/form-data">
+      <input id="image-input" type="file" name="image">
+      <input id="image-submit" type="submit" value="Submit">
+    </form>
+</div>
